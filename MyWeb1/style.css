@@ -1,0 +1,28 @@
+.jumbotron {
+  padding-top: 7rem;
+  background-color: rgb(175, 207, 238);
+}
+
+body {
+  min-height: 3000px;
+}
+
+#about {
+  background-color: rgb(243, 244, 245);
+}
+
+#projects {
+  background-color: rgb(175, 207, 238);
+}
+
+#contact {
+  background-color: rgb(243, 244, 245);
+}
+
+footer{
+  background-color: rgb(43, 111, 179);
+}
+
+section {
+  padding-top: 5rem;
+}
