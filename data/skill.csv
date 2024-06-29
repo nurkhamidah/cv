@@ -1,0 +1,34 @@
+Type;Name;Expertise Level (out of 5);Star;First Use;Latest Use;Years of Experience;Associated with;First Use_MY;Latest Use_MY
+Programming Language;R;5;5;2018-01-01;2024-06-29 03:09:17.280;6.416666667;['University of Brawijaya', ' Bogor Agricultural (IPB) University'];01-2018;06-2024
+Programming Language;Python;5;5;2019-01-01;2024-06-29 03:09:17.280;5.416666667;['University of Brawijaya', ' Bogor Agricultural (IPB) University'];01-2019;06-2024
+Dashboard;RShiny;4;4;2021-01-01;2024-06-29 03:09:17.280;3.416666667;['Bogor Agricultural (IPB) University'];01-2021;06-2024
+Dashboard;Streamlit;4;4;2022-06-01;2024-06-29 03:09:17.280;2.0;['Bogor Agricultural (IPB) University'];06-2022;06-2024
+Dashboard;Tableau;3;3;2024-01-01;2024-06-29 03:09:17.280;0.4166666667;['Bogor Agricultural (IPB) University'];01-2024;06-2024
+Database System;SQL;4;4;2019-01-01;2024-01-01 00:00:00.000;5.0;['University of Brawijaya', ' Bogor Agricultural (IPB) University'];01-2019;01-2024
+Database System;MySQL;4;4;2021-11-01;2022-03-01 00:00:00.000;0.3333333333;['Sinarmas Mining'];11-2021;03-2022
+Database System;NoSQL (MongoDB);4;4;2023-01-01;2023-08-01 00:00:00.000;0.5833333333;['Bogor Agricultural (IPB) University'];01-2023;08-2023
+Database System;PosgtreSQL;4;4;2021-11-01;2023-08-01 00:00:00.000;1.75;['Sinarmas Mining', ' Bogor Agricultural (IPB) University'];11-2021;08-2023
+Other;Microsoft Excel;5;5;2014-07-01;2024-06-29 03:09:17.280;9.916666667;['University of Brawijaya', ' Bogor Agricultural (IPB) University'];07-2014;06-2024
+Programming Language;Go;1;1;2021-11-01;2022-03-01 00:00:00.000;0.3333333333;['Sinarmas Mining'];11-2021;03-2022
+Programming Language;JavaScript;2;2;2021-11-02;2022-03-02 00:00:00.000;0.3333333333;['Sinarmas Mining'];11-2021;03-2022
+Programming Language;ReactJS;1;1;2021-11-03;2022-03-03 00:00:00.000;0.3333333333;['Sinarmas Mining'];11-2021;03-2022
+Other;HTML;3;3;2021-11-04;2022-05-01 00:00:00.000;0.4166666667;['Sinarmas Mining'];11-2021;05-2022
+Other;CSS;3;3;2021-11-05;2022-05-02 00:00:00.000;0.4166666667;['Sinarmas Mining'];11-2021;05-2022
+Library;Tensorflow;4;4;2023-02-01;2024-06-01 00:00:00.000;1.333333333;['Bogor Agricultural (IPB) University'];02-2023;06-2024
+Library;Pytorch;4;4;2023-02-02;2024-06-02 00:00:00.000;1.333333333;['Bogor Agricultural (IPB) University'];02-2023;06-2024
+Library;Keras;4;4;2022-08-01;2024-06-01 00:00:00.000;1.833333333;['Bogor Agricultural (IPB) University'];08-2022;06-2024
+Other;Canva;4;4;2021-01-01;2024-06-29 03:09:17.280;3.416666667;['University of Brawijaya', ' Bogor Agricultural (IPB) University'];01-2021;06-2024
+Version Control;Git;4;4;2021-11-01;2024-06-29 03:09:17.280;2.583333333;['Sinarmas Mining', ' Bogor Agricultural (IPB) University'];11-2021;06-2024
+Version Control;Git Actions;4;4;2023-01-01;2023-07-01 00:00:00.000;0.5;['Bogor Agricultural (IPB) University'];01-2023;07-2023
+Library;BeautifulSoup;4;4;2023-01-01;2024-06-01 00:00:00.000;1.416666667;['Bogor Agricultural (IPB) University'];01-2023;06-2024
+Library;Requests;4;4;2023-01-01;2024-06-29 03:09:17.280;1.416666667;['Bogor Agricultural (IPB) University'];01-2023;06-2024
+Library;Plotly;4;4;2022-07-01;2024-06-29 03:09:17.280;1.916666667;['Bogor Agricultural (IPB) University'];07-2022;06-2024
+Library;Sklearn;4;4;2022-08-01;2024-06-29 03:09:17.280;1.833333333;['University of Brawijaya', ' Bogor Agricultural (IPB) University'];08-2022;06-2024
+Library;Numpy;5;5;2019-01-01;2024-06-29 03:09:17.280;5.416666667;['University of Brawijaya', ' Bogor Agricultural (IPB) University'];01-2019;06-2024
+Library;Scipy;4;4;2023-01-01;2024-06-29 03:09:17.280;1.416666667;['Bogor Agricultural (IPB) University'];01-2023;06-2024
+Library;Matplotlib;4;4;2022-06-01;2024-06-29 03:09:17.280;2.0;['University of Brawijaya', ' Bogor Agricultural (IPB) University'];06-2022;06-2024
+Library;Pandas;5;5;2024-01-01;2024-06-29 03:09:17.280;0.4166666667;['University of Brawijaya', ' Bogor Agricultural (IPB) University'];01-2024;06-2024
+Operating System;Linux OS;4;4;2021-11-01;2022-03-01 00:00:00.000;0.3333333333;['Sinarmas Mining'];11-2021;03-2022
+Operating System;Mac OS;5;5;2022-10-01;2024-06-29 03:09:17.280;1.666666667;['Bogor Agricultural (IPB) University'];10-2022;06-2024
+Operating System;Windows OS;5;5;2017-08-01;2024-06-29 03:09:17.280;6.833333333;['University of Brawijaya', ' Bogor Agricultural (IPB) University'];08-2017;06-2024
+Other;API;4;4;2022-06-01;2024-06-29 03:09:17.280;2.0;['Bogor Agricultural (IPB) University'];06-2022;06-2024
