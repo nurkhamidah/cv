@@ -71,7 +71,7 @@ if pages == 'Experiences':
         base_skill = st.checkbox('Filter based on tools/skills')
         if base_skill:
             skill_exp = st.selectbox('Choose tools/skills:', ['Tools', 'Hard Skill', 'Soft Skill'])
-            skill_opt = st.multiselect('Choose '+ skill_exp, experience[skill_exp].explode().to_list())
+            skill_opt = st.multiselect('Choose '+ skill_exp, set(experience[skill_exp].explode().to_list()))
             experience = experience[[any(x in i for x in skill_opt) for i in experience[skill_exp]]]
     with exp2:
         st.plotly_chart(makeBarchart(experience, base_exp, 'Duration (Month)'))
@@ -101,7 +101,34 @@ if pages == 'Experiences':
     
 # --------------------------- Skills & Portfolios
 if pages == 'Skills & Portfolios':
-    pages
+    st.markdown('<h2>PORTFOLIOS<b></b></h2>', unsafe_allow_html=True)
+    por1, por2 = st.columns([1,4], gap='large')
+    with por1:
+        por_opt = st.selectbox('Filter by', ['All', 'Type', 'Skill', 'Tools', 'Method', 'Status'])
+        if por_opt == 'All':
+            dat_por = portfolio[['Name', 'Link', 'Date', 'Type', 'Tools', 'Method', 'Associated with', 'Status']]
+        elif por_opt in ['Type', 'Status']:
+            por_opt2 = st.multiselect('Select '+ por_opt, portfolio[por_opt].unique())
+            dat_por = portfolio[portfolio[por_opt].isin(por_opt2)][['Name', 'Link', 'Date', 'Type', 'Tools', 'Method', 'Associated with', 'Status']]
+        else:
+            por_opt2 = st.multiselect('Select '+ por_opt, set(portfolio[por_opt].explode().to_list()))
+            dat_por = portfolio[[any(x in i for x in por_opt2) for i in portfolio[por_opt]]][['Name', 'Link', 'Date', 'Type', 'Tools', 'Method', 'Associated with', 'Status']]
+    with por2:
+        st.dataframe(dat_por, use_container_width=True, hide_index=True,
+                     column_config = {
+                         "Link": st.column_config.LinkColumn('Link'),
+                         "Tools" : st.column_config.ListColumn('Tools'),
+                         "Method" : st.column_config.ListColumn('Method')
+                     })
+    st.markdown('<h2>SKILL <b>PRACTICED</b></h2>', unsafe_allow_html=True)
+    ski1, ski2, ski3 = st.columns([1,1,3], gap='large')
+    with ski2:
+        '**Show bar based on:**'
+        ski_exp = st.checkbox('Expertise Level', value=True)
+        ski_yoe = st.checkbox('YoE', value=True)
+    with ski1:
+        ski_opt = st.selectbox('Choose type of skill:', skill['Type'].unique())
+    st.plotly_chart(makeBarChart2(ski_opt, ski_exp, ski_yoe))
     
 # --------------------------- Certificates
 if pages == 'Certificates':

@@ -1,5 +1,6 @@
 import pandas as pd
 import plotly.figure_factory as ff
+import plotly.graph_objects as go
 import plotly.express as px
 import re
 
@@ -43,7 +44,7 @@ skill['Associated with'] = skill['Associated with'].apply(stringSplit)
 portfolio['Skill'] = portfolio['Skill'].apply(stringSplit)
 portfolio['Method'] = portfolio['Method'].apply(stringSplit)
 portfolio['Tools'] = portfolio['Tools'].apply(stringSplit)
-
+portfolio['Date'] = portfolio['Date'].apply(lambda x: x.strftime('%B %d, %Y'))
 experience['Duration (Month)'] = experience.apply(lambda x: diff_month(x['End'], x['Start']),
                                                   axis=1)
 
@@ -79,11 +80,31 @@ gc.update_layout(autosize=True, title='', title_x=0.5)
 ## ------------------------------------- BAR CHART
 def makeBarchart(df, col1, col2):
     df = df.groupby([col1])[col2].sum()
-    fig = px.bar(df, orientation='h')
+    fig = px.bar(df)
     # Customize labels
     fig.update_xaxes(showgrid=True)
     fig.update_yaxes(showgrid=True)
     return(fig)
+
+def makeBarChart2(types, expr, yoe):
+    bar_yoe = go.Bar(name='YoE', x=skill[skill['Type'] == types]['Name'], 
+                y=skill['Years of Experience'], yaxis='y2', offsetgroup=2, marker_color='darkSlateGrey',
+                customdata=skill[skill['Type'] == types][['First Use', 'Latest Use', 'Type', 'Associated with']],
+                hovertemplate='''<b>%{customdata[2]}: </b>%{x} with usage %{y} year(s)<br><b>First Usage: </b>%{customdata[0]}<br><b>Association: </b>%{customdata[3]}''')
+    bar_lev = go.Bar(name='Level', x=skill[skill['Type'] == types]['Name'], 
+                y=skill['Expertise Level (out of 5)'], yaxis='y', offsetgroup=1, marker_color='grey',
+                customdata=skill[skill['Type'] == types][['First Use', 'Latest Use', 'Type', 'Associated with']],
+                hovertemplate='''<b>%{customdata[2]}: </b> %{x} with expertise %{y} out of 5<br><b>First Usage: </b>%{customdata[0]}<br><b>Association: </b>%{customdata[3]}''')
+    fig = go.Figure()
+    if expr:
+        fig.add_trace(bar_lev)
+        fig.update_layout({'yaxis': {'title': 'Expertise Level (out of 5)'}}, barmode='group')
+    if yoe:
+        fig.add_trace(bar_yoe)
+        fig.update_layout({'yaxis2':{'title': 'Years of Experienced', 'overlaying': 'y', 'side': 'right'}}, barmode='group')
+    return fig
+        
+        
 
 # --------------------------- CSV
 # --------------------------- CSV
