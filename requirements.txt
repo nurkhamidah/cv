@@ -2,3 +2,4 @@ plotly
 pandas
 style
 streamlit_option_menu
+openpyxl
