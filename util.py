@@ -80,7 +80,7 @@ gc.update_layout(autosize=True, title='', title_x=0.5)
 ## ------------------------------------- BAR CHART
 def makeBarchart(df, col1, col2):
     df = df.groupby([col1])[col2].sum()
-    fig = px.bar(df)
+    fig = px.bar(df, orientation = 'h')
     # Customize labels
     fig.update_xaxes(showgrid=True)
     fig.update_yaxes(showgrid=True)
