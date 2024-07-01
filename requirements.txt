@@ -1,5 +1,4 @@
 data
 plotly
 pandas
-re
 style

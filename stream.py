@@ -57,7 +57,7 @@ if pages == 'About':
         col1, col2, col3 = st.columns([1,2,1])
         with col2:
             st.page_link(page='https://bit.ly/tableau_nurkhamidah', label='TABLEAU VER', icon='🔗', use_container_width=True)
-            st.download_button(label='⬇️ DOWNLOAD CV', data = 'data/Nur    Khamidah_CV_2.pdf', file_name='CV Nur Khamidah.pdf')
+            st.download_button(label='⬇️ DOWNLOAD CV', data = 'data/CV Nur Khamidah_1:7.pdf', file_name='CV Nur Khamidah.pdf')
         
 # --------------------------- Experiences
 if pages == 'Experiences':
