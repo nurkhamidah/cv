@@ -13,7 +13,7 @@ with open('style.css') as css:
 
 st.markdown('<h1>NUR <b>KHAMIDAH</b></h1>', unsafe_allow_html=True)
 
-pages = option_menu("", ['About', 'Experiences', 'Skills & Portfolios', 'Certificates', 'Contact Me'], 
+pages = option_menu("", ['About', 'Experiences', 'Skills & Portfolios', 'Certificates'], 
     icons=['file-person', 'send-arrow-up', 'bag-fill', 'file-earmark-text', 'chat-left-quote'], default_index=0, orientation="horizontal")
 
 # --------------------------- About
@@ -132,8 +132,10 @@ if pages == 'Skills & Portfolios':
     
 # --------------------------- Certificates
 if pages == 'Certificates':
-    pages
+    st.markdown('<h2>COURSE <b>CERTIFICATES</b></h2>', unsafe_allow_html=True)
+    st.dataframe(certification, use_container_width=True)
     
-# --------------------------- Contact Me
-if pages == 'Contact Me':
-    pages
+    st.markdown('<h2>PREFERRED <b>LANGUAGES</b></h2>', unsafe_allow_html=True)
+    st.dataframe(language, use_container_width=True)
+
+    

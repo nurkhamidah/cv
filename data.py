@@ -22,11 +22,11 @@ nude2 = '#c3b4af'
 nude3 = '#ada08d'
 
 # --------------------------- DATA
-experience = pd.read_excel('Tableau CV-2.xlsx', sheet_name='EXPERIENCE')
-skill = pd.read_excel('Tableau CV-2.xlsx', sheet_name='SKILL')
-language = pd.read_excel('Tableau CV-2.xlsx', sheet_name='LANGUAGES')
-certification = pd.read_excel('Tableau CV-2.xlsx', sheet_name='CERTIFICATION')
-portfolio = pd.read_excel('Tableau CV-2.xlsx', sheet_name='PORTFOLIO')
+experience = pd.read_excel('data/Tableau CV-2.xlsx', sheet_name='EXPERIENCE')
+skill = pd.read_excel('data/Tableau CV-2.xlsx', sheet_name='SKILL')
+language = pd.read_excel('data/Tableau CV-2.xlsx', sheet_name='LANGUAGES')
+certification = pd.read_excel('data/Tableau CV-2.xlsx', sheet_name='CERTIFICATION')
+portfolio = pd.read_excel('data/Tableau CV-2.xlsx', sheet_name='PORTFOLIO')
 
 # --------------------------- FUNCTIONS
 def stringSplit(strs):
@@ -103,8 +103,4 @@ def makeBarChart2(types, expr, yoe):
         fig.add_trace(bar_yoe)
         fig.update_layout({'yaxis2':{'title': 'Years of Experienced', 'overlaying': 'y', 'side': 'right'}}, barmode='group')
     return fig
-        
-        
 
-# --------------------------- CSV
-# --------------------------- CSV
