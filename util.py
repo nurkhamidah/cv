@@ -53,6 +53,8 @@ experience['Duration (Month)'] = experience.apply(lambda x: diff_month(x['End'],
 # --------------------------- About
 ## ------------------------------------- TXT
 about = '<div class="txt"><b>Data Scientist</b> with a strong foundation in statistical modeling, machine learning, and data visualization. Proven expertise in <b>Python, R, SQL, and NoSQL databases</b>, with a track record of developing innovative solutions and insightful analytics. Adept at handling large datasets, conducting comprehensive research, and delivering actionable insights. Seeking to leverage my skills and experience to contribute to cutting-edge projects in data science and analytics. Some of the analytical techniques mastered include statistical modeling, analysis of unstructured data such as text data, machine learning including clustering and classification and their anomaly handling and interpretation, and deep learning with BERT.</div>'
+with open("data/CV Nur Khamidah_1:7.pdf", "rb") as pdf_file:
+    document = pdf_file.read()
 
 # --------------------------- Experience
 ## ------------------------------------- GANTT CHART
